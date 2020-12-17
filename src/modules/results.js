@@ -1,24 +1,24 @@
 import {dateBuilder} from './weather';
+
 const api = {
   key: '4cc8a926413ba21a3774022235df5269',
   base: 'https://api.openweathermap.org/data/2.5/',
 };
 
-const searchbox = document.querySelector('.search-box');
-searchbox.addEventListener('keypress', setQuery);
 
-export function setQuery(evt) {
+
+export const setQuery = (evt) => {
   if (evt.keyCode === 13) {
     getResults(searchbox.value);
   }
 }
 
-async function getResults(query) {
+const getResults = async (query) => {
   await fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
     .then(weather => weather.json()).then(displayResults);
 }
 
-function displayResults(weather) {
+const displayResults = (weather) => {
   const city = document.querySelector('.location .city');
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
@@ -36,3 +36,5 @@ function displayResults(weather) {
   hilow.innerText = `${Math.round(weather.main.temp_min)}°C / ${Math.round(weather.main.temp_max)}°C`;
 }
 
+const searchbox = document.querySelector('.search-box');
+searchbox.addEventListener('keypress', setQuery);
