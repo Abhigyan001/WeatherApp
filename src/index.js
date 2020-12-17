@@ -1,3 +1,3 @@
-import {setQuery} from './modules/results';
+import { setQuery } from './modules/results';
 
 setQuery(13);
