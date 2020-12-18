@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="icon" href="img/weather.png" type="image/gif" sizes="16x16" />
+</head>
+
+<body>
+
+  <div class="app-wrap">
+    <header class="d-flex mt-5">
+      <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
+    </header>
+    <main>
+      <section class="location">
+        <div class="city">Guwahati, IND</div>
+        <div class="date">Thursday 17 December 2020</div>
+      </section>
+      <div class="current">
+        <div class="temp">15<span>°C</span></div>
+        <div class="weather">Sunny</div>
+        <div class="hi-low">13°C / 16°C</div>
+      </div>
+      <div class="switch mt-4">        
+        <input type="checkbox" class="tick" switch />         
+        <div>
+          <span class="text-white">Check/Uncheck to see temperature in °F/°C</span>            
+        </div>
+        </span>        
+      </div>
+    </main>
+  </div>
+  <script defer src="main.js"></script>
+</body>
+</html>
